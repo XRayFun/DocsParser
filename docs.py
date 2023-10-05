@@ -1,9 +1,4 @@
 """
- Script for downloading docs from docs.cntd.ru , but it can be used freely only night time (20:00 to 24:00 Moscow time).
- The code provides an example of frequently used normative documents for information security specialists.
- The following libraries are used in the program: os, requests, datetime.
- Actualy on Mac OS Ventura.
- 
  Author:   XRayFun
            https://github.com/XRayFun
            https://gitlab.com/XRayFun
@@ -26,7 +21,6 @@ import os
 from datetime import datetime
 
 
-#   "any name": number   -- (From URL: https://docs.cntd.ru/document/{number})
 docs = {
     "ГОСТ Р ИСО МЭК 27000-2012 'Информационная технология. Методы и средства обеспечения безопасности. Системы менеджмента информационной безопасности. Общий обзор и терминология'": 1200102762,
     "ГОСТ Р ИСО МЭК 27000-2021 'Информационные технологии. Методы и средства обеспечения безопасности. Системы менеджмента информационной безопасности. Общий обзор и терминология'": 1200179675,
