@@ -59,12 +59,12 @@ The following libraries are used in the program: `os, requests, datetime`.
 `text` - the same text to output.
 * `getPageData(number)` - function for obtaining payload of a specific document from the <https://docs.cntd.ru> portal.
 `number` - document identifier at the end of the link (`https://docs.cntd.ru/document/{number}`)
-* `installHTML()` - creates a "Docs as HTML" directory in the directory with the executable file, traverses all `docs` elements by calling the `getPageData()` method and writes the information to the `{doc_name}.html` file. If a document with this name already exists in the catalog - it will be skipped.
+* `installHTML()` - creates a "*Docs as HTML*" directory in the directory with the executable file, traverses all `docs` elements by calling the `getPageData()` method and writes the information to the `{doc_name}.html` file. If a document with this name already exists in the catalog - it will be skipped.
 * `getLinks()` - outputs a list of sources with the document name, reference, and date of reference intended for subsequent copying to the source list.
 
 ## How to use
 
-1. В начале работы вам необходимо открыть <https://docs.cntd.ru> и найти интересующие вас документы.
-2. Укажите в `docs` наименования документов (не более 200 символов) и его идентификатор (*https://docs.cntd.ru/document/{**ID**}*) по аналогии с имеющимися файлами. Ненужные документы можно удалить. Документы перечисляются через `,`.
-3. Если вам необходимо скачать документы - используйте метод `installHTML()`. Документы будут загружены в директорию "Docs as HTML" в формате `*.html`. Важно учитывать, что некоторые документы могут быть загружены не полностью при отсутствии платной подписки на электронный ресурс. Чтобы файл был скачан полностью - запускайте этот метод в период с 20:00 по 24:00 пр Московскому времени.
-4. Если вам необходимо получить список источников - используйте метод `getLinks()`. Для его использования не обязательно скачивать документы на устройство.
+1. When you start, you need to open <https://docs.cntd.ru> and find the documents you are interested in.
+2. Specify in `docs` the names of documents (not more than 200 symbols) and its identifier (https://docs.cntd.ru/document/{*ID*}) by analogy with existing files. Unnecessary documents can be deleted. Documents are listed with `,`.
+3. If you need to download documents - use the `installHTML()` method. The documents will be downloaded to the "*Docs as HTML*" directory in `*.html` format. It is important to take into account that some documents may not be downloaded completely if there is no paid subscription to the electronic resource. To download a file in full - run this method between 20:00 and 24:00 Moscow time.
+4. If you need to get a list of sources - use the `getLinks()` method. It is not necessary to download documents to the device to use this method.
